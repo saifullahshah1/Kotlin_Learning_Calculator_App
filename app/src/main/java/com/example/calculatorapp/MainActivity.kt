@@ -8,11 +8,11 @@ import com.example.calculatorapp.databinding.ActivityMainBinding
 import kotlin.math.exp
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityMainBinding
 
-    var errorFlag = false
+//    var errorFlag = false
     var decimalFlag = true
     var operatorFlag = false
 
@@ -22,13 +22,24 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+
+        binding.button1.setOnClickListener { onAllClearClick() }
+//        binding.button10.setOnClickListener(this)
+
     }
 
-    fun onAllClearClick(view: View) {
+    fun onAllClearClick() {
         binding.expressionText.text = ""
         binding.resultText.text = ""
         binding.resultText.visibility = View.GONE
     }
+
+//    fun onAllClearClick(view: View) {
+//        binding.expressionText.text = ""
+//        binding.resultText.text = ""
+//        binding.resultText.visibility = View.GONE
+//    }
 
     fun onClearClick(view: View) {
         binding.expressionText.text = ""
@@ -53,7 +64,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onDigitClick(view: View) {
-
         if (view is Button) {
             if (view.text == ".") {
                 if (decimalFlag) {
@@ -159,7 +169,6 @@ class MainActivity : AppCompatActivity() {
         return newExpressionList
     }
 
-
     private fun additionSubtractionFtn(inputList: MutableList<Any>): Float {
         var expressionList = inputList
         var calculatedResult = expressionList[0] as Float
@@ -181,5 +190,8 @@ class MainActivity : AppCompatActivity() {
         return calculatedResult
     }
 
+    override fun onClick(p0: View?) {
+//        binding.button10 onAllClearClick()
+    }
 
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#315132"
+    android:background="#18212A"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
 
         android:layout_height="0dp"
+        android:background="#36474F"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.3"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,9 +23,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
+            android:fontFamily="@font/roboto"
             android:text=""
             android:textColor="@color/white"
-            android:textSize="30sp"
+            android:textSize="50sp"
             app:layout_constraintBottom_toTopOf="@+id/resultText"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -33,13 +35,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="11dp"
+            android:fontFamily="@font/roboto"
             android:text=""
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:visibility="gone"
-            />
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -47,8 +49,11 @@
         android:id="@+id/button1"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="AC"
-        app:backgroundTint="#651F09"
+        android:fontFamily="@font/roboto"
+        android:text="@string/ac_text"
+        android:textColor="#C5C7C7"
+        android:textSize="22sp"
+        app:backgroundTint="#18212A"
         app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintHeight_percent="0.1"
@@ -56,15 +61,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintWidth_percent="0.2"
-        android:onClick="onAllClearClick"/>
+        app:layout_constraintWidth_percent="0.2" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="C"
-        app:backgroundTint="#651F09"
+        android:fontFamily="@font/roboto"
+        android:onClick="onClearClick"
+        android:text="@string/c_text"
+        android:textColor="#C5C7C7"
+        android:textSize="26sp"
+        app:backgroundTint="#18212A"
         app:layout_constraintBottom_toTopOf="@+id/button6"
         app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintHeight_percent="0.1"
@@ -72,15 +80,18 @@
         app:layout_constraintStart_toEndOf="@+id/button1"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintWidth_percent="0.2"
-        android:onClick="onClearClick"/>
+        app:layout_constraintWidth_percent="0.2" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="⌫"
-        app:backgroundTint="#651F09"
+        android:fontFamily="@font/roboto"
+        android:onClick="onBackSpaceClick"
+        android:text="@string/backspaceText"
+        android:textColor="#C5C7C7"
+        android:textSize="26sp"
+        app:backgroundTint="#18212A"
         app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toStartOf="@+id/button4"
         app:layout_constraintHeight_percent="0.1"
@@ -88,15 +99,18 @@
         app:layout_constraintStart_toEndOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintWidth_percent="0.2"
-        android:onClick="onBackSpaceClick"/>
+        app:layout_constraintWidth_percent="0.2" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="/"
-        app:backgroundTint="#651F09"
+        android:fontFamily="@font/roboto"
+        android:onClick="onOperationClick"
+        android:text="@string/divide_text"
+        android:textColor="#494748"
+        android:textSize="34sp"
+        app:backgroundTint="#E5E5E5"
         app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.1"
@@ -104,15 +118,17 @@
         app:layout_constraintStart_toEndOf="@+id/button3"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintWidth_percent="0.2"
-        android:onClick="onOperationClick"/>
+        app:layout_constraintWidth_percent="0.2" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="7"
-        app:backgroundTint="#651F09"
+        android:fontFamily="@font/roboto"
+        android:onClick="onDigitClick"
+        android:text="@string/seven_text"
+        android:textSize="34sp"
+        app:backgroundTint="#18212A"
         app:layout_constraintBottom_toTopOf="@+id/button9"
         app:layout_constraintEnd_toStartOf="@+id/button6"
         app:layout_constraintHeight_percent="0.1"
@@ -120,15 +136,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button1"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintWidth_percent="0.2"
-        android:onClick="onDigitClick"/>
+        app:layout_constraintWidth_percent="0.2" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="8"
-        app:backgroundTint="#651F09"
+        android:fontFamily="@font/roboto"
+        android:onClick="onDigitClick"
+        android:text="@string/eight_text"
+        android:textSize="34sp"
+        app:backgroundTint="#18212A"
         app:layout_constraintBottom_toTopOf="@+id/button10"
         app:layout_constraintEnd_toStartOf="@+id/button7"
         app:layout_constraintHeight_percent="0.1"
@@ -136,15 +154,17 @@
         app:layout_constraintStart_toEndOf="@+id/button5"
         app:layout_constraintTop_toBottomOf="@+id/button2"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintWidth_percent="0.2"
-        android:onClick="onDigitClick"/>
+        app:layout_constraintWidth_percent="0.2" />
 
     <Button
         android:id="@+id/button7"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="9"
-        app:backgroundTint="#651F09"
+        android:fontFamily="@font/roboto"
+        android:onClick="onDigitClick"
+        android:text="@string/nine_text"
+        android:textSize="34sp"
+        app:backgroundTint="#18212A"
         app:layout_constraintBottom_toTopOf="@+id/button11"
         app:layout_constraintEnd_toStartOf="@+id/button8"
         app:layout_constraintHeight_percent="0.1"
@@ -152,15 +172,18 @@
         app:layout_constraintStart_toEndOf="@+id/button6"
         app:layout_constraintTop_toBottomOf="@+id/button3"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintWidth_percent="0.2"
-        android:onClick="onDigitClick"/>
+        app:layout_constraintWidth_percent="0.2" />
 
     <Button
         android:id="@+id/button8"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="x"
-        app:backgroundTint="#651F09"
+        android:fontFamily="@font/roboto"
+        android:onClick="onOperationClick"
+        android:text="@string/mul_text"
+        android:textColor="#494748"
+        android:textSize="34sp"
+        app:backgroundTint="#E5E5E5"
         app:layout_constraintBottom_toTopOf="@+id/button12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.1"
@@ -168,15 +191,17 @@
         app:layout_constraintStart_toEndOf="@+id/button7"
         app:layout_constraintTop_toBottomOf="@+id/button4"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintWidth_percent="0.2"
-        android:onClick="onOperationClick"/>
+        app:layout_constraintWidth_percent="0.2" />
 
     <Button
         android:id="@+id/button9"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="4"
-        app:backgroundTint="#651F09"
+        android:fontFamily="@font/roboto"
+        android:onClick="onDigitClick"
+        android:text="@string/four_text"
+        android:textSize="34sp"
+        app:backgroundTint="#18212A"
         app:layout_constraintBottom_toTopOf="@+id/button13"
         app:layout_constraintEnd_toStartOf="@+id/button10"
         app:layout_constraintHeight_percent="0.1"
@@ -184,15 +209,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button5"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintWidth_percent="0.2"
-        android:onClick="onDigitClick"/>
+        app:layout_constraintWidth_percent="0.2" />
 
     <Button
         android:id="@+id/button10"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="5"
-        app:backgroundTint="#651F09"
+        android:fontFamily="@font/roboto"
+        android:onClick="onDigitClick"
+        android:text="@string/five_text"
+        android:textSize="34sp"
+        app:backgroundTint="#18212A"
         app:layout_constraintBottom_toTopOf="@+id/button14"
         app:layout_constraintEnd_toStartOf="@+id/button11"
         app:layout_constraintHeight_percent="0.1"
@@ -200,15 +227,17 @@
         app:layout_constraintStart_toEndOf="@+id/button9"
         app:layout_constraintTop_toBottomOf="@+id/button6"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintWidth_percent="0.2"
-        android:onClick="onDigitClick"/>
+        app:layout_constraintWidth_percent="0.2" />
 
     <Button
         android:id="@+id/button11"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="6"
-        app:backgroundTint="#651F09"
+        android:fontFamily="@font/roboto"
+        android:onClick="onDigitClick"
+        android:text="@string/six_text"
+        android:textSize="34sp"
+        app:backgroundTint="#18212A"
         app:layout_constraintBottom_toTopOf="@+id/button15"
         app:layout_constraintEnd_toStartOf="@+id/button12"
         app:layout_constraintHeight_percent="0.1"
@@ -216,14 +245,18 @@
         app:layout_constraintStart_toEndOf="@+id/button10"
         app:layout_constraintTop_toBottomOf="@+id/button7"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintWidth_percent="0.2"
-        android:onClick="onDigitClick"/>
+        app:layout_constraintWidth_percent="0.2" />
+
     <Button
         android:id="@+id/button12"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="-"
-        app:backgroundTint="#651F09"
+        android:fontFamily="@font/roboto"
+        android:onClick="onOperationClick"
+        android:text="@string/subtract_text"
+        android:textColor="#494748"
+        android:textSize="34sp"
+        app:backgroundTint="#E5E5E5"
         app:layout_constraintBottom_toTopOf="@+id/button16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.1"
@@ -231,15 +264,18 @@
         app:layout_constraintStart_toEndOf="@+id/button11"
         app:layout_constraintTop_toBottomOf="@+id/button8"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintWidth_percent="0.2"
-        android:onClick="onOperationClick"/>
+        app:layout_constraintWidth_percent="0.2" />
 
     <Button
         android:id="@+id/button16"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="+"
-        app:backgroundTint="#651F09"
+        android:fontFamily="@font/roboto"
+        android:onClick="onOperationClick"
+        android:text="@string/add_text"
+        android:textColor="#494748"
+        android:textSize="34sp"
+        app:backgroundTint="#E5E5E5"
         app:layout_constraintBottom_toTopOf="@+id/button19"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.1"
@@ -247,15 +283,17 @@
         app:layout_constraintStart_toEndOf="@+id/button15"
         app:layout_constraintTop_toBottomOf="@+id/button12"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintWidth_percent="0.2"
-        android:onClick="onOperationClick"/>
+        app:layout_constraintWidth_percent="0.2" />
 
     <Button
         android:id="@+id/button13"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="1"
-        app:backgroundTint="#651F09"
+        android:fontFamily="@font/roboto"
+        android:onClick="onDigitClick"
+        android:text="@string/one_text"
+        android:textSize="34sp"
+        app:backgroundTint="#18212A"
         app:layout_constraintBottom_toTopOf="@+id/button17"
         app:layout_constraintEnd_toStartOf="@+id/button14"
         app:layout_constraintHeight_percent="0.1"
@@ -263,15 +301,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button9"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintWidth_percent="0.2"
-        android:onClick="onDigitClick"/>
+        app:layout_constraintWidth_percent="0.2" />
 
     <Button
         android:id="@+id/button15"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="3"
-        app:backgroundTint="#651F09"
+        android:fontFamily="@font/roboto"
+        android:onClick="onDigitClick"
+        android:text="@string/three_text"
+        android:textSize="34sp"
+        app:backgroundTint="#18212A"
         app:layout_constraintBottom_toTopOf="@+id/button19"
         app:layout_constraintEnd_toStartOf="@+id/button16"
         app:layout_constraintHeight_percent="0.1"
@@ -279,15 +319,17 @@
         app:layout_constraintStart_toEndOf="@+id/button14"
         app:layout_constraintTop_toBottomOf="@+id/button11"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintWidth_percent="0.2"
-        android:onClick="onDigitClick"/>
+        app:layout_constraintWidth_percent="0.2" />
 
     <Button
         android:id="@+id/button14"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="2"
-        app:backgroundTint="#651F09"
+        android:fontFamily="@font/roboto"
+        android:onClick="onDigitClick"
+        android:text="@string/two_text"
+        android:textSize="34sp"
+        app:backgroundTint="#18212A"
         app:layout_constraintBottom_toTopOf="@+id/button18"
         app:layout_constraintEnd_toStartOf="@+id/button15"
         app:layout_constraintHeight_percent="0.1"
@@ -295,15 +337,17 @@
         app:layout_constraintStart_toEndOf="@+id/button13"
         app:layout_constraintTop_toBottomOf="@+id/button10"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintWidth_percent="0.2"
-        android:onClick="onDigitClick"/>
+        app:layout_constraintWidth_percent="0.2" />
 
     <Button
         android:id="@+id/button19"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="="
-        app:backgroundTint="#651F09"
+        android:fontFamily="@font/roboto"
+        android:onClick="onEqualClick"
+        android:text="@string/equalTo_text"
+        android:textSize="34sp"
+        app:backgroundTint="#FF6531"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.1"
@@ -311,15 +355,17 @@
         app:layout_constraintStart_toEndOf="@+id/button18"
         app:layout_constraintTop_toBottomOf="@+id/button16"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintWidth_percent="0.44"
-        android:onClick="onEqualClick" />
+        app:layout_constraintWidth_percent="0.44" />
 
     <Button
         android:id="@+id/button17"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="0"
-        app:backgroundTint="#651F09"
+        android:fontFamily="@font/roboto"
+        android:onClick="onDigitClick"
+        android:text="@string/zero_text"
+        android:textSize="34sp"
+        app:backgroundTint="#18212A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button18"
         app:layout_constraintHeight_percent="0.1"
@@ -327,15 +373,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button13"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintWidth_percent="0.2"
-        android:onClick="onDigitClick"/>
+        app:layout_constraintWidth_percent="0.2" />
 
     <Button
         android:id="@+id/button18"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="."
-        app:backgroundTint="#651F09"
+        android:fontFamily="@font/roboto"
+        android:onClick="onDigitClick"
+        android:text="@string/dot_text"
+        android:textSize="34sp"
+        app:backgroundTint="#18212A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button19"
         app:layout_constraintHeight_percent="0.1"
@@ -343,8 +391,7 @@
         app:layout_constraintStart_toEndOf="@+id/button17"
         app:layout_constraintTop_toBottomOf="@+id/button14"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintWidth_percent="0.2"
-        android:onClick="onDigitClick"/>
+        app:layout_constraintWidth_percent="0.2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
